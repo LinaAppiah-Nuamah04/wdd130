@@ -1,0 +1,59 @@
+/* Style for the .callout container */
+.callout {
+    max-width: 600px;
+    /* Restrict width */
+    margin: 20px auto;
+    /* Center the box */
+    padding: 20px;
+    /* Add spacing inside */
+    background-color: #1c4a84;
+    /* Dark blue background */
+    color: white;
+    /* White text color */
+    border: 3px solid #1c4a84;
+    /* Border matching background */
+}
+
+/* Style for the image */
+.callout img {
+    float: right;
+    /* Move image to the right */
+    margin: 10px;
+    /* Add space around the image */
+    border: 3px solid #ccc;
+    /* Thin border around image */
+    padding: 5px;
+    /* Padding inside border */
+    background-color: white;
+    /* White background */
+    width: 120px;
+    /* Set width */
+    height: 120px;
+    /* Set height */
+}
+
+/* Style for the blockquote */
+blockquote {
+    margin: 10px 0;
+    /* Add vertical space */
+    font-size: 1.1em;
+    /* Slightly larger text */
+    font-weight: bold;
+    /* Bold text */
+}
+
+/* Style for the cite */
+cite {
+    display: block;
+    /* Place on a new line */
+    border-top: 1px dotted white;
+    /* Dashed top border */
+    padding-top: 10px;
+    /* Space above citation */
+    text-align: right;
+    /* Align to the right */
+    font-size: 1em;
+    /* Normal font size */
+    font-style: italic;
+    /* Italicize text */
+}
