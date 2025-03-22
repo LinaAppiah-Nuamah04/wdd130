@@ -1,25 +1,39 @@
+/* Define CSS Variables */
+:root {
+    --primary-color: darkblue;
+    --secondary-color: white;
+    --text-color: #333;
+    --border-color: #ccc;
+    --background-light: #f9f9f9;
+    --shadow-color: gray;
+    --padding-small: 2px;
+    --padding-medium: 10px;
+    --padding-large: 20px;
+    --border-radius: 10px;
+}
+
 /* Existing Styles */
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--primary-color);
+    padding: var(--padding-medium);
 }
 
 nav a {
-    color: white;
+    color: var(--secondary-color);
     display: block;
-    padding: 20px;
+    padding: var(--padding-large);
 }
 
 h1 {
-    color: darkblue;
+    color: var(--primary-color);
 }
 
 img {
     width: 150px;
     height: auto;
     border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    padding: var(--padding-small);
+    box-shadow: 0 0 30px var(--shadow-color);
 }
 
 /* Updated p padding */
@@ -30,61 +44,41 @@ p {
 /* New Styles */
 main {
     max-width: 800px;
-    /* Limit width */
     margin: auto;
-    /* Center the main content */
 }
 
 aside {
     width: 300px;
-    /* Set width */
     margin: 20px auto;
-    /* Center aside */
-    border: 2px solid #ccc;
-    /* Add border */
+    border: 2px solid var(--border-color);
     padding: 15px;
-    /* Add padding */
-    background-color: #f9f9f9;
-    /* Light background color */
-    color: #333;
-    /* Text color */
+    background-color: var(--background-light);
+    color: var(--text-color);
     text-align: center;
-    /* Center text */
-    border-radius: 10px;
-    /* Rounded corners */
+    border-radius: var(--border-radius);
 }
 
 aside img {
     width: 200px;
-    /* Set width */
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
-    margin: 10px auto;
-    /* Center image */
+    margin: var(--padding-medium) auto;
     border-radius: 8px;
-    /* Optional rounded corners */
 }
 
 /* Adjust profile image inside main */
 main img {
     width: 150px;
-    /* Keep existing width */
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
-    margin: 10px auto;
+    margin: var(--padding-medium) auto;
 }
 
 /* Footer styles */
 footer {
     margin-top: 20px;
-    /* Space from content */
-    border-top: 2px solid #ccc;
-    /* Top border */
+    border-top: 2px solid var(--border-color);
     text-align: center;
-    /* Center text */
-    padding: 10px;
+    padding: var(--padding-medium);
     background-color: #eee;
-    /* Light gray background */
 }
