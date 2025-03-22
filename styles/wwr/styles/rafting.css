@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #505033;
+    /* Primary Color */
+    --secondary-color: #264969;
+    /* Secondary Color */
+    --accent1-color: #CFCFB4;
+    /* Accent1 Color */
+    --accent2-color: #B4CDE4;
+    /* Accent2 Color */
+    --heading-font: 'Lato', sans-serif;
+    --paragraph-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+header {
+    padding: 20px;
+    background-color: var(--accent1-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+
+nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    text-align: center;
+    /* Center-align text and content */
+}
+
+.hero-img {
+    display: block;
+    width: 80%;
+    /* Reduce the size of the hero image */
+    height: auto;
+    margin: 0 auto;
+    /* Center the hero image */
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the h1 text horizontally */
+    color: white;
+    background-color: rgba(80, 80, 51, 0.7);
+    /* Add a semi-transparent background for better visibility */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hero article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the article both horizontally and vertically */
+    background-color: rgba(207, 207, 180, 0.9);
+    /* Use accent1 color with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    /* Adjust the width of the article */
+    max-width: 400px;
+    /* Limit the maximum width */
+}
+
+.hero article img {
+    display: block;
+    margin: 0 auto 10px;
+    /* Center the happy client image */
+    width: 200px;
+    /* Increased size of the happy client image */
+    height: auto;
+    border-radius: 70%;
+    /* Make the image circular */
+}
+
+.hero article p {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--accent1-color);
+}
+
+.sociallinks a {
+    text-decoration: none;
+}
+
+.sociallinks img {
+    width: 30px;
+    height: 30px;
+}
