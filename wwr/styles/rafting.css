@@ -84,7 +84,6 @@ nav a {
     /* Use accent1 color with transparency */
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
     width: 80%;
     /* Adjust the width of the article */
     max-width: 400px;
@@ -92,20 +91,23 @@ nav a {
 }
 
 .hero article img {
-    display: block;
-    margin: 0 auto 10px;
-    /* Center the happy client image */
+    float: right;
+    /* Float the image to the right */
+    margin-left: 15px;
+    /* Add space between the image and the paragraph */
     width: 200px;
     /* Increased size of the happy client image */
     height: auto;
     border-radius: 70%;
-    /* Make the image circular */
+    /* Make the image slightly oval */
 }
 
 .hero article p {
     color: var(--primary-color);
     font-size: 1.2em;
     margin: 0;
+    text-align: left;
+    /* Align the paragraph text to the left */
 }
 
 /* Footer Styling */
