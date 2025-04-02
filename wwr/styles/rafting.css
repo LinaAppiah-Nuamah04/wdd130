@@ -1,12 +1,8 @@
 :root {
     --primary-color: #505033;
-    /* Primary Color */
     --secondary-color: #264969;
-    /* Secondary Color */
     --accent1-color: #CFCFB4;
-    /* Accent1 Color */
     --accent2-color: #B4CDE4;
-    /* Accent2 Color */
     --heading-font: 'Lato', sans-serif;
     --paragraph-font: 'Roboto', sans-serif;
 }
@@ -18,47 +14,54 @@ body {
     padding: 20px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
+/* HEADER - CSS Grid Layout */
 header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Logo | Title | Nav */
+    align-items: center;
+    gap: 20px;
     padding: 20px;
     background-color: var(--accent1-color);
 }
 
-nav {
+/* NAVIGATION - Flexbox Layout */
+nav ul {
     display: flex;
-    justify-content: space-around;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     background-color: var(--secondary-color);
     padding: 10px;
+    border-radius: 5px;
 }
 
 nav a {
     color: var(--accent2-color);
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
 }
 
-/* Hero Section Styling */
+/* HERO SECTION */
 .hero {
     position: relative;
     text-align: center;
-    /* Center-align text and content */
+    margin: 20px 0;
 }
 
 .hero-img {
     display: block;
-    width: 80%;
-    /* Reduce the size of the hero image */
+    width: 100%;
     height: auto;
-    margin: 0 auto;
-    /* Center the hero image */
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .hero h1 {
@@ -66,62 +69,95 @@ nav a {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    /* Center the h1 text horizontally */
     color: white;
     background-color: rgba(80, 80, 51, 0.7);
-    /* Add a semi-transparent background for better visibility */
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
 }
 
 .hero article {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Center the article both horizontally and vertically */
+    bottom: 20px;
+    left: 20px;
     background-color: rgba(207, 207, 180, 0.9);
-    /* Use accent1 color with transparency */
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    /* Adjust the width of the article */
-    max-width: 400px;
-    /* Limit the maximum width */
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 300px;
 }
 
 .hero article img {
     float: right;
-    /* Float the image to the right */
     margin-left: 15px;
-    /* Add space between the image and the paragraph */
-    width: 200px;
-    /* Increased size of the happy client image */
-    height: auto;
-    border-radius: 70%;
-    /* Make the image slightly oval */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.hero article p {
-    color: var(--primary-color);
-    font-size: 1.2em;
+/* HISTORY SECTION - Grid Layout */
+.history {
+    margin: 40px 0;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* ADVENTURES SECTION - Grid Layout */
+.adventures {
+    margin: 40px 0;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.adventure-gallery figure {
     margin: 0;
-    text-align: left;
-    /* Align the paragraph text to the left */
+    text-align: center;
 }
 
-/* Footer Styling */
+.adventure-gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* FOOTER - Flexbox Layout */
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: var(--accent1-color);
+    border-radius: 5px;
+    margin-top: 40px;
 }
 
-.sociallinks a {
-    text-decoration: none;
+.sociallinks {
+    display: flex;
+    gap: 15px;
 }
 
 .sociallinks img {
     width: 30px;
     height: 30px;
+    transition: transform 0.3s;
+}
+
+.sociallinks img:hover {
+    transform: scale(1.1);
 }

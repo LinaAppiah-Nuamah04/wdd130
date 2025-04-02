@@ -18,15 +18,17 @@
 </head>
 
 <body>
-    <!-- HEADER SECTION -->
+    <!-- HEADER SECTION - Now using CSS Grid for layout -->
     <header>
         <img src="images/Image-wwr.png" alt="White Water Rafting Logo" width="150">
         <h1>White Water Rafting</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
+            <ul> <!-- Added <ul> for better semantic structure and Flexbox control -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -43,27 +45,46 @@
             </article>
         </div>
 
-        <!-- History Section -->
-        <section>
+        <!-- History Section - Now using CSS Grid for two-column layout -->
+        <section class="history">
             <h2>History</h2>
-            <p>Founded in 2023, White Water Rafting Co. has been leading the way in adventure tourism. Our experienced
-                guides ensure a safe and thrilling experience for all our clients. Join us for an unforgettable
-                journeyWhite Water Rafting was founded with a passion for the outdoors and adventure. Over the years, we
-                have guided countless enthusiasts through exhilarating river rapids.</p>
+            <div class="history-content">
+                <p>Founded in 2023, White Water Rafting Co. has been leading the way in adventure tourism. Our experienced
+                    guides ensure a safe and thrilling experience for all our clients.</p>
+                <p>White Water Rafting was founded with a passion for the outdoors and adventure. Over the years, we
+                    have guided countless enthusiasts through exhilarating river rapids.</p>
+            </div>
         </section>
 
-        <!-- Adventure Awaits Section -->
-        <section>
+        <!-- Adventure Awaits Section - Now using CSS Grid for image gallery -->
+        <section class="adventures">
             <h2>Adventure Awaits You!</h2>
-            <img src="images/rafting1 (1).jpg" alt="Rafting adventure 1">
-            <img src="images/rafting2.jpg" alt="Rafting adventure 2">
-            <img src="images/rafting3.avif" alt="Rafting adventure 3">
-            <img src="images/rafting4.avif" alt="Rafting adventure 4">
-            <img src="images/rafting5.avif" alt="Rafting adventure 5">
+            <div class="adventure-gallery">
+                <figure>
+                    <img src="images/rafting1 (1).jpg" alt="Rafting adventure 1">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting2.jpg" alt="Rafting adventure 2">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting3.avif" alt="Rafting adventure 3">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting4.avif" alt="Rafting adventure 4">
+                    <figcaption>Wild Rapids</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting5.avif" alt="Rafting adventure 5">
+                    <figcaption>Sunset Cruise</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
-    <!-- FOOTER SECTION -->
+    <!-- FOOTER SECTION - Improved with Flexbox for social icons -->
     <footer>
         <p>&copy; 2025 White Water Rafting | Lina Appiah-Nuamah</p>
         <nav class="sociallinks">
@@ -74,4 +95,4 @@
     </footer>
 </body>
 
-</html>
+</html> 
