@@ -12,22 +12,35 @@
     --border-radius: 10px;
 }
 
-/* Existing Styles */
+/* Center header, footer, and grid container */
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Navigation styles */
 nav {
     background-color: var(--primary-color);
     padding: var(--padding-medium);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: var(--secondary-color);
     display: block;
     padding: var(--padding-large);
+    text-decoration: none;
 }
 
+/* Heading style */
 h1 {
     color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
 }
 
+/* Image styles */
 img {
     width: 150px;
     height: auto;
@@ -41,12 +54,14 @@ p {
     padding: 0;
 }
 
-/* New Styles */
-main {
-    max-width: 800px;
-    margin: auto;
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--padding-medium);
 }
 
+/* Aside styles */
 aside {
     width: 300px;
     margin: 20px auto;
@@ -58,15 +73,7 @@ aside {
     border-radius: var(--border-radius);
 }
 
-aside img {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin: var(--padding-medium) auto;
-    border-radius: 8px;
-}
-
-/* Adjust profile image inside main */
+/* Profile image inside main */
 main img {
     width: 150px;
     height: auto;
